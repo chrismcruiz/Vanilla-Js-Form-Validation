@@ -1,0 +1,20 @@
+const countriesSelect = document.getElementById("countries");
+const dialCode = document.getElementById("dialCode");
+
+const fetchDialCode = async (countryName) => {
+    try {
+        const res = await fetch(`
+https://restcountries.com/v3.1/name/${countryName}?fullText=true`);
+        const data = await res.json();
+        const { root, suffixes } = data[0].idd;
+        const code = root + suffixes[0];
+        dialCode.textContent = code;
+    } catch (err) {
+        console.error(err);
+    }
+};
+
+countriesSelect.addEventListener("change", (e) => {
+    const countryName = e.target.value;
+    fetchDialCode(countryName);
+});

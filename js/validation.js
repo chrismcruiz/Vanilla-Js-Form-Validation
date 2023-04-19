@@ -18,6 +18,8 @@ const resetFormButton = document.getElementById("resetForm");
 const errors = form.querySelectorAll(".form__error");
 const inputs = form.querySelectorAll(".form__input");
 
+const dialCode = document.getElementById("dialCode");
+
 const formIsValid = {
   firstName: false,
   lastName: false,
@@ -38,7 +40,7 @@ const toggleClasses = (input, error, isValid) => {
 
 const validateInput = (key) => {
   const input = inputFields[key];
-  const error = input.parentElement.nextElementSibling;
+  const error = input.closest('.form__field').nextElementSibling;
 
   const validationRules = {
     email: () => emailRegex.test(input.value) || "Please enter a valid email address",
@@ -80,7 +82,7 @@ form.addEventListener("submit", (e) => {
       lastName: inputFields.lastName.value,
       email: inputFields.email.value,
       password: inputFields.password.value,
-      phoneNumber: inputFields.phoneNumber.value,
+      phoneNumber: dialCode + inputFields.phoneNumber.value,
       age: inputFields.age.value,
       url: inputFields.url.value,
     };

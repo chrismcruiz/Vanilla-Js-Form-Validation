@@ -9,13 +9,15 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/card.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <link rel="stylesheet" href="styles/konami.css" />
     <script
       src="https://kit.fontawesome.com/b634ddd2fa.js"
       data-keep-original-source="false"
       crossorigin="anonymous"
     ></script>
+    <script defer src="js/fetchCountries.js" type="module"></script>
+    <script defer src="js/dialCode.js" type="module"></script>
     <script defer src="js/validation.js" type="module"></script>
     <script defer src="js/konami-code.js" type="module"></script>
     <title>Register Form</title>
@@ -42,7 +44,6 @@
                     name="firstname"
                     class="form__input"
                     type="text"
-                    placeholder="John"
                   />
                 </div>
                 <div class="form__error"></div>
@@ -55,7 +56,6 @@
                     name="lastname"
                     class="form__input"
                     type="text"
-                    placeholder="Doe"
                   />
                 </div>
                 <div class="form__error"></div>
@@ -69,7 +69,6 @@
                   name="email"
                   class="form__input"
                   type="email"
-                  placeholder="example@hotmail.com"
                 />
               </div>
               <div class="form__error"></div>
@@ -102,31 +101,33 @@
                 <div class="form__error"></div>
               </div>
             </div>
+            <div class="form__additional-info">
+              <span class="bold">Info:</span> passwords should contain at least
+              8 characters
+            </div>
             <div class="form__row">
               <div class="form__column form__column--75">
                 <div class="form__field">
-                  <label for="phone" class="form__label">Phone Number </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    class="form__input"
-                    type="tel"
-                    placeholder="+57 XXXXXXXXXX"
-                  />
+                  <label for="phone" class="form__label">Country</label>
+                  <select name="countries" id="countries" class="form__select">
+                    <option value="" selected disabled>
+                      Select your country
+                    </option>
+                  </select>
                 </div>
-                <div class="form__error"></div>
               </div>
               <div class="form__column form__column--25">
                 <div class="form__field">
-                  <label for="age" class="form__label">Age</label>
-                  <input
-                    id="age"
-                    name="age"
-                    class="form__input"
-                    type="number"
-                    min="0"
-                    max="100"
-                  />
+                  <label for="phone" class="form__label">Phone Number</label>
+                  <div class="form__inputContainer">
+                    <span class="form__dialCode" id="dialCode">#</span>
+                    <input
+                      id="phone"
+                      name="phone"
+                      class="form__input form__input--phone"
+                      type="tel"
+                    />
+                  </div>
                 </div>
                 <div class="form__error"></div>
               </div>
@@ -134,13 +135,7 @@
             <div class="form__row form__row--single">
               <div class="form__field">
                 <label for="url" class="form__label">Website URL</label>
-                <input
-                  id="url"
-                  name="url"
-                  class="form__input"
-                  type="url"
-                  placeholder="https://example.com"
-                />
+                <input id="url" name="url" class="form__input" type="url" />
               </div>
               <div class="form__error"></div>
             </div>
@@ -162,14 +157,14 @@
             </div>
             <div class="form__actions">
               <button type="submit" id="form__submit" class="form__submit">
-                Sign Me Up!
+                Sign Up
               </button>
               <button type="reset" id="resetForm" class="form__reset">
                 <i class="fa fa-arrow-rotate-right"></i>
               </button>
             </div>
             <div class="form__registered">
-              Already have an account? <a class="form__link" href="#">Log in</a>
+              Already have an account? <a class="form__link" href="#">Login</a>
             </div>
           </form>
         </div>

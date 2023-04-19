@@ -1,3 +1,4 @@
+const COUNTRIES_API = 'https://restcountries.com/v3.1/all'
 const KONAMI_CODE = "itsame";
 
-export { KONAMI_CODE }
+export { COUNTRIES_API, KONAMI_CODE }
