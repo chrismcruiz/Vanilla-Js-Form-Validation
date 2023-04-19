@@ -233,12 +233,16 @@ body {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 640px) {
   .card-container,
   .card-right,
   .form__column,
   .form__submit {
     width: 100%;
+  }
+
+  .form__row {
+    display: block;
   }
 
   .card-left {
@@ -255,7 +259,8 @@ body {
     margin-bottom: 1em;
   }
 
-  .form__input {
+  .form__input,
+  .form__select {
     padding: 0.5em;
   }
   .form__column--mb {

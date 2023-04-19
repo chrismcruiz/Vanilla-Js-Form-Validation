@@ -1,10 +1,12 @@
+import { COUNTRIES_API } from "./constants.js";
+
 const countriesSelect = document.getElementById("countries");
 const dialCode = document.getElementById("dialCode");
 
 const fetchDialCode = async (countryName) => {
     try {
         const res = await fetch(`
-https://restcountries.com/v3.1/name/${countryName}?fullText=true`);
+${COUNTRIES_API}/name/${countryName}?fullText=true&fields=idd`);
         const data = await res.json();
         const { root, suffixes } = data[0].idd;
         const code = root + suffixes[0];

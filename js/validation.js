@@ -9,7 +9,7 @@ const inputFields = {
   password: document.getElementById("password"),
   confirmPass: document.getElementById("confirm_pass"),
   phoneNumber: document.getElementById("phone"),
-  age: document.getElementById("age"),
+  // age: document.getElementById("age"),
   url: document.getElementById("url"),
   terms: document.getElementById("terms"),
 };
@@ -27,7 +27,7 @@ const formIsValid = {
   password: false,
   confirmPass: false,
   phoneNumber: false,
-  age: false,
+  // age: false,
   url: false,
   terms: false,
 };

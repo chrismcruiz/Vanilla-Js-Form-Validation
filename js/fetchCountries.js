@@ -9,14 +9,18 @@ const displayCountries = (countries) => {
         option.textContent = country.name.common;
         fragment.appendChild(option);
     });
+
     countriesSelect.appendChild(fragment);
 };
 
 const fetchCountries = async () => {
     try {
-        const res = await fetch(COUNTRIES_API);
+        const res = await fetch(`${COUNTRIES_API}/all?fields=name`);
         const data = await res.json();
-        displayCountries(data);
+        const orderedData = data.sort((a, b) =>
+            a.name.common < b.name.common ? -1 : 1
+        );
+        displayCountries(orderedData);
     } catch (err) {
         console.error(err);
     }
