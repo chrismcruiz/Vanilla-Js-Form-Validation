@@ -1,0 +1,7 @@
+:root {
+  --primary-color: #ef4242;
+  --text-color: hsl(0, 0%, 31%);
+  --bg-color: #d3d3d3;
+  --bg-color-opaque: rgba(0, 0, 0, 0.7);
+  --border-radius: 0.4em;
+}

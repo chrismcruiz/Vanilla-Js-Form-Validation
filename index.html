@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/card.css" />
+    <link rel="stylesheet" href="styles/konami.css" />
+    <script
+      src="https://kit.fontawesome.com/b634ddd2fa.js"
+      data-keep-original-source="false"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/validation.js" type="module"></script>
+    <script defer src="js/konami-code.js" type="module"></script>
+    <title>Register Form</title>
+  </head>
+  <body>
+    <main id="card-container" class="card-container">
+      <div class="card">
+        <div class="card-left">
+          <img
+            class="card-left__image"
+            src="images/sunset2.jpg"
+            alt="Applaudo's motto"
+          />
+        </div>
+        <div class="card-right">
+          <h1 class="title">Register</h1>
+          <form id="form" class="form" novalidate>
+            <div class="form__row">
+              <div class="form__column">
+                <div class="form__field">
+                  <label for="firstname" class="form__label">First Name</label>
+                  <input
+                    id="firstname"
+                    name="firstname"
+                    class="form__input"
+                    type="text"
+                    placeholder="John"
+                  />
+                </div>
+                <div class="form__error"></div>
+              </div>
+              <div class="form__column">
+                <div class="form__field">
+                  <label for="lastname" class="form__label">Last Name</label>
+                  <input
+                    id="lastname"
+                    name="lastname"
+                    class="form__input"
+                    type="text"
+                    placeholder="Doe"
+                  />
+                </div>
+                <div class="form__error"></div>
+              </div>
+            </div>
+            <div class="form__row form__row--single">
+              <div class="form__field">
+                <label for="email" class="form__label">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  class="form__input"
+                  type="email"
+                  placeholder="example@hotmail.com"
+                />
+              </div>
+              <div class="form__error"></div>
+            </div>
+            <div class="form__row">
+              <div class="form__column">
+                <div class="form__field">
+                  <label for="password" class="form__label">Password</label>
+                  <input
+                    id="password"
+                    name="password"
+                    class="form__input"
+                    type="password"
+                  />
+                </div>
+                <div class="form__error"></div>
+              </div>
+              <div class="form__column">
+                <div class="form__field">
+                  <label for="confirm_pass" class="form__label"
+                    >Confirm Password</label
+                  >
+                  <input
+                    id="confirm_pass"
+                    name="confirm_pass"
+                    class="form__input"
+                    type="password"
+                  />
+                </div>
+                <div class="form__error"></div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__column form__column--75">
+                <div class="form__field">
+                  <label for="phone" class="form__label">Phone Number </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    class="form__input"
+                    type="tel"
+                    placeholder="+57 XXXXXXXXXX"
+                  />
+                </div>
+                <div class="form__error"></div>
+              </div>
+              <div class="form__column form__column--25">
+                <div class="form__field">
+                  <label for="age" class="form__label">Age</label>
+                  <input
+                    id="age"
+                    name="age"
+                    class="form__input"
+                    type="number"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+                <div class="form__error"></div>
+              </div>
+            </div>
+            <div class="form__row form__row--single">
+              <div class="form__field">
+                <label for="url" class="form__label">Website URL</label>
+                <input
+                  id="url"
+                  name="url"
+                  class="form__input"
+                  type="url"
+                  placeholder="https://example.com"
+                />
+              </div>
+              <div class="form__error"></div>
+            </div>
+            <div class="form__row form__row--single">
+              <div class="form__field form__field--terms">
+                <input
+                  id="terms"
+                  class="form__checkbox"
+                  type="checkbox"
+                  name="terms"
+                />
+                <label for="terms"
+                  >I have read and agree to the
+                  <a class="form__link" href="#">Terms</a> and
+                  <a class="form__link" href="#">Conditions</a></label
+                >
+              </div>
+              <div class="form__error"></div>
+            </div>
+            <div class="form__actions">
+              <button type="submit" id="form__submit" class="form__submit">
+                Sign Me Up!
+              </button>
+              <button type="reset" id="resetForm" class="form__reset">
+                <i class="fa fa-arrow-rotate-right"></i>
+              </button>
+            </div>
+            <div class="form__registered">
+              Already have an account? <a class="form__link" href="#">Log in</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- konami code -->
+    <article id="konami-code" class="konami-code konami-code--hidden">
+      <!-- konami code gif -->
+      <img
+        class="konami-code__gif"
+        src="images/rick.gif"
+        alt="Rick Astley dancing"
+      />
+      <button class="konami-code__close" type="button" id="konami-code__close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- konami code audio -->
+      <audio id="rick-audio" src="media/rick.mp3" loop>
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </article>
+  </body>
+</html>
