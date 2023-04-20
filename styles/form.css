@@ -120,7 +120,6 @@ body {
 }
 
 .form__input--phone {
-  padding: 70px;
 }
 
 .form__inputContainer {
@@ -128,17 +127,19 @@ body {
 }
 
 .form__dialCode {
-  position: absolute;
-  width: 60px;
-  font-weight: 500;
+  font-size: 0.85rem;
+  width: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fceded;
+  opacity: 0.8;
+  border-radius: var(--border-radius);
+  position: absolute;
   top: 1px;
   left: 1px;
   bottom: 1px;
-  background-color: #e9e8e8;
-  border-radius: var(--border-radius);
+  border-right: 1px solid #cacaca;
 }
 
 .form__input--error {
@@ -265,7 +266,7 @@ body {
   }
 
   .form__input--phone {
-    padding-left: 70px;
+    padding-left: 65px;
   }
 
   .form__column--mb {
