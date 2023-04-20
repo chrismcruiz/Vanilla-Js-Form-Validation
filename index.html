@@ -105,16 +105,34 @@
               <span class="bold">Info:</span> passwords should contain at least
               8 characters
             </div>
+            <div class="form__row form__row--single">
+              <div class="form__field">
+                <label for="birthdate" class="form__label">Born Date</label>
+                <input
+                  id="birthdate"
+                  name="birthdate"
+                  class="form__input"
+                  type="date"
+                />
+              </div>
+              <div class="form__error"></div>
+            </div>
+
             <div class="form__row">
               <div class="form__column form__column--75">
                 <div class="form__field">
                   <label for="phone" class="form__label">Country</label>
-                  <select name="countries" id="countries" class="form__select">
+                  <select
+                    name="countries"
+                    id="countries"
+                    class="form__input form__select"
+                  >
                     <option value="" selected disabled>
                       Select your country
                     </option>
                   </select>
                 </div>
+                <div class="form__error"></div>
               </div>
               <div class="form__column form__column--25">
                 <div class="form__field">

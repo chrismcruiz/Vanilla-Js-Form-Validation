@@ -7,6 +7,7 @@ const displayCountries = (countries) => {
     countries.forEach((country) => {
         const option = document.createElement("OPTION");
         option.textContent = country.name.common;
+        option.value = country.name.common.toLowerCase();
         fragment.appendChild(option);
     });
 

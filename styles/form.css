@@ -120,7 +120,7 @@ body {
 }
 
 .form__input--phone {
-  padding-left: 40%;
+  padding: 70px;
 }
 
 .form__inputContainer {
@@ -129,7 +129,7 @@ body {
 
 .form__dialCode {
   position: absolute;
-  width: 35%;
+  width: 60px;
   font-weight: 500;
   display: flex;
   justify-content: center;
@@ -263,6 +263,11 @@ body {
   .form__select {
     padding: 0.5em;
   }
+
+  .form__input--phone {
+    padding-left: 70px;
+  }
+
   .form__column--mb {
     margin-bottom: 1em;
   }

@@ -8,8 +8,9 @@ const inputFields = {
   email: document.getElementById("email"),
   password: document.getElementById("password"),
   confirmPass: document.getElementById("confirm_pass"),
+  countries: document.getElementById("countries"),
   phoneNumber: document.getElementById("phone"),
-  // age: document.getElementById("age"),
+  birthdate: document.getElementById("birthdate"),
   url: document.getElementById("url"),
   terms: document.getElementById("terms"),
 };
@@ -26,8 +27,9 @@ const formIsValid = {
   email: false,
   password: false,
   confirmPass: false,
+  country: false,
   phoneNumber: false,
-  // age: false,
+  birthdate: false,
   url: false,
   terms: false,
 };
@@ -93,6 +95,7 @@ form.addEventListener("submit", (e) => {
 resetFormButton.addEventListener("click", () => {
   errors.forEach((error) => error.classList.add("form__error--hidden"));
   inputs.forEach((input) => {
+    console.log(input)
     input.classList.remove("form__input--error");
     input.classList.remove("form__input--valid");
   });
