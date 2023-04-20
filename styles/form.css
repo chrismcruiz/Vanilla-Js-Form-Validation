@@ -120,6 +120,7 @@ body {
 }
 
 .form__input--phone {
+  /* padding-left: 58px; */
 }
 
 .form__inputContainer {
@@ -266,7 +267,7 @@ body {
   }
 
   .form__input--phone {
-    padding-left: 65px;
+    padding-left: 55px;
   }
 
   .form__column--mb {
